@@ -26,7 +26,7 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
-  // history: { type: 'hash' },
+
   routes: [
     { path: '/user', component: '@/pages/user' },
     { path: '/role', component: '@/pages/role' },
@@ -38,7 +38,7 @@ export default defineConfig({
   },
 
   outputPath: 'docs',
-
+  history: { type: 'hash' },
   proxy: {
   },
   // mfsu: {}
