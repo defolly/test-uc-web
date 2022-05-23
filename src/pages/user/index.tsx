@@ -8,7 +8,6 @@ import { ApiResponse, InputTable, utils, useSingle } from 'ls-pro-common';
 import type { TableToolbar } from 'ls-pro-common';
 import Service from './services';
 
-
 const { rangeToSearch, yesnoList, statusList } = utils;
 
 type User = {
@@ -118,7 +117,7 @@ const columns: ProColumns<User>[] = [
     title: '组织名称',
     dataIndex: 'orgName',
     ellipsis: true,
-    width: 280,   
+    width: 280,
   },
   {
     title: '员工属性',
@@ -214,7 +213,6 @@ export default () => {
     onExport,
   } = useSingle({ service, toolConfig, initItem });
 
-
   return (
     <>
       <ProTable<User>
@@ -240,36 +238,7 @@ export default () => {
             setSelectedRows(rows);
           },
         }}
-        toolBarRender={() => [
-          ...tableTools,
-          // <Button
-          //   key="reset"
-          //   disabled={selectedRows.length === 0}
-          //   onClick={onResetPassword}
-          // >
-          //   重置密码
-          // </Button>,
-          // <Dropdown
-          //   key="copy"
-          //   overlay={copyMenu}
-          //   disabled={selectedRows.length === 0}
-          // >
-          //   <Button>
-          //     权限克隆
-          //     <DownOutlined />
-          //   </Button>
-          // </Dropdown>,
-          // <Dropdown
-          //   key="allot"
-          //   overlay={allotMenu}
-          //   disabled={selectedRows.length !== 1}
-          // >
-          //   <Button>
-          //     权限分配
-          //     <DownOutlined />
-          //   </Button>
-          // </Dropdown>         
-        ]}
+        toolBarRender={() => [...tableTools]}
       ></ProTable>
 
       <ModalForm<User>
@@ -334,7 +303,6 @@ export default () => {
           label="备注"
         />
       </ModalForm>
-
     </>
   );
 };
