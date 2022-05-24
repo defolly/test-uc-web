@@ -1,6 +1,6 @@
-(window['webpackJsonp_lesoon-permission-web'] =
-  window['webpackJsonp_lesoon-permission-web'] || []).push([
-  [2],
+(window['webpackJsonp_test-uc-web'] =
+  window['webpackJsonp_test-uc-web'] || []).push([
+  [4],
   {
     i1J9: function (e, a, t) {
       'use strict';

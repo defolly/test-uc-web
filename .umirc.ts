@@ -6,8 +6,9 @@ export default defineConfig({
   mountElementId: 'uc-web',
   styles: [
     `html,body{height:100%}
-     #uc-web{height:100%;width:100%;position: relative;${dev ? 'background:#f0f0f0' : ''
-    }}
+     #uc-web{height:100%;width:100%;position: relative;${
+       dev ? 'background:#f0f0f0' : ''
+     }}
     `,
   ],
   theme: {
@@ -30,6 +31,14 @@ export default defineConfig({
   routes: [
     { path: '/user', component: '@/pages/user' },
     { path: '/role', component: '@/pages/role' },
+    {
+      path: '/',
+      component: '@/layouts/index',
+      routes: [
+        { path: '/my/user', component: '@/pages/user' },
+        { path: '/my/role', component: '@/pages/role' },
+      ],
+    },
     { component: '@/components/404' },
   ],
   fastRefresh: {},
@@ -39,7 +48,6 @@ export default defineConfig({
 
   outputPath: 'docs',
   history: { type: 'hash' },
-  proxy: {
-  },
+  proxy: {},
   // mfsu: {}
 });

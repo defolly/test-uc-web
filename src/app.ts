@@ -15,3 +15,11 @@ export const qiankun = {
     console.log('uc-web unmount', props);
   },
 };
+
+// export function render(oldRender){
+//   try{
+//     oldRender()
+//   }catch(e){
+//     console.log('ddd')
+//   }
+// }
